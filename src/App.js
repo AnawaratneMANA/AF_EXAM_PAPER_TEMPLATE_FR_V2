@@ -5,16 +5,16 @@ import {AddUser} from './Components/AddUser/addUser';
 import {EditUser} from './Components/EditUser/editUser';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {EditAndView} from "./Components/Page/editAndView";
 function App() {
     return (
         <React.Fragment>
-            <div style={{maxWidth: "30rem", margin: "4rem auto"}}>
+            <div>
                 <Router>
-                    {/*Put the navigation bar here.*/}
+                    <Route path="/" component={Home}/>
                     <Switch>
-                        <Route exact path="/" component={Home}/>
                         <Route exact path="/add" component={AddUser}/>
-                        <Route exact path="/edit/:id" component={EditUser}/>
+                        <Route exact path="/edit/:id" component={EditAndView}/>
                     </Switch>
                 </Router>
             </div>

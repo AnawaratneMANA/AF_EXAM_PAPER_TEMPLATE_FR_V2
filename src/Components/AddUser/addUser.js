@@ -13,7 +13,7 @@ export const AddUser = () => {
             <label className="label">Name:</label><br/>
             <input className="input-field" type="text" placeholder="Enter the Name"/><br/>
             <button className="btn-submit" type ="submit">Submit</button>
-            <Link className="btn-submit btn-submit-cancel">Cancel</Link>
+            <Link to="/" className="btn-submit btn-submit-cancel">Cancel</Link>
         </div>
     )
 }

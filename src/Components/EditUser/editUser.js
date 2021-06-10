@@ -3,9 +3,7 @@ import {Link} from "react-router-dom";
 import './editUser.css'
 export const EditUser = () => {
     return (
-        <div>
             <div className="edit-user">
-
                 <div className="header-section">
                     <h2 className="main-head">Edit Users</h2>
                     <h4 className="secondary-head">Insert Operation.</h4>
@@ -16,6 +14,5 @@ export const EditUser = () => {
                 <button className="btn-submit" type ="submit">Submit</button>
                 <Link className="btn-submit btn-submit-cancel">Cancel</Link>
             </div>
-        </div>
     )
 }
