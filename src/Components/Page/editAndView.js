@@ -4,7 +4,7 @@ import {EditUser} from "../EditUser/editUser";
 import {UserList} from "../UserList/userList";
 export const EditAndView = () => {
     return (
-        <div>
+        <div className="container">
             <EditUser/>
             <UserList/>
         </div>
