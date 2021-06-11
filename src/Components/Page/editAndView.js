@@ -27,10 +27,26 @@ export const EditAndView = () => {
         setSelectedUser(object);
     }
 
+    const deleteUser = (userId) => {
+
+    }
+
+    const updateUser = () => {
+
+    }
+
+    const clear = () => {
+        let object =  {
+            _id: '',
+            firstName: ''
+        }
+        setSelectedUser(object);
+    }
+
     return (
         <div className="container">
-            <EditUser selectedUser={selectedUser}/>
-            <UserList users={users} sendSelectedUser={sendSelectedUser}/>
+            <EditUser selectedUser={selectedUser} updateUser={updateUser} clear={clear}/>
+            <UserList users={users} sendSelectedUser={sendSelectedUser} deleteUser={deleteUser}/>
         </div>
     )
 }

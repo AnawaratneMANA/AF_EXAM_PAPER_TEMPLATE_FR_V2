@@ -2,12 +2,12 @@ import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
 import './editUser.css'
 import useDeepCompareEffect from "use-deep-compare-effect";
-export const EditUser = ({selectedUser}) => {
+import {Button} from "@material-ui/core";
+export const EditUser = ({selectedUser, updateUser, clear}) => {
 
     useEffect(()=> {
         console.log("Print Something over change")
     }, [selectedUser])
-
 
     return (
             <div className="edit-user">
@@ -17,9 +17,9 @@ export const EditUser = ({selectedUser}) => {
                 </div>
 
                 <label className="label">Name:</label><br/>
-                <input value={selectedUser.firstName} className="input-field" type="text" placeholder="Enter the Name"/><br/>
-                <button className="btn-submit" type ="submit">Submit</button>
-                <Link className="btn-submit btn-submit-cancel">Cancel</Link>
+                <input value={selectedUser?.firstName} className="input-field" type="text" placeholder="Enter the Name"/><br/>
+                <button className="btn-submit" type ="submit">Update</button>
+                <button onClick={() => clear()} className="btn-submit btn-submit-cancel">Clear</button>
             </div>
     )
 }

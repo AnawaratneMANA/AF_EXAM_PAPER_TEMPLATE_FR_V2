@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import './userList.css'
 import {Button} from "@material-ui/core";
-import axios from "axios";
-export const UserList = ({users, sendSelectedUser}) => {
+export const UserList = ({users, sendSelectedUser, deleteUser}) => {
+
+    useEffect(() => {
+
+    }, [users])
 
     //Testing Array with Dummy values.
     const products = [
@@ -35,7 +38,7 @@ export const UserList = ({users, sendSelectedUser}) => {
                             <td>{user._id}</td>
                             <td>{user.firstName}</td>
                             <td><Button onClick={() => sendSelectedUser(user)}>Edit</Button></td>
-                            <td><Button>Delete</Button></td>
+                            <td><Button onClick={() => deleteUser(user._id)}>Delete</Button></td>
                         </tr>
                         )
                     )}
