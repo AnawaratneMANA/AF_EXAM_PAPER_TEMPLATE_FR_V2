@@ -14,8 +14,9 @@ class UserDataService {
         return http.get("/user");
     }
 
-    deleteUsers (userData) {
-        return http.delete("/user/delete", userData);
+    deleteUsers(userData){
+        console.log(userData)
+        return http.delete("/user/delete/" + userData);
     }
 }
 

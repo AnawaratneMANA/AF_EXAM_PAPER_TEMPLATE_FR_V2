@@ -27,16 +27,16 @@ export const EditAndView = () => {
         setSelectedUser(object);
     }
 
-    const deleteUser = (DeleteUser) => {
-        console.log(DeleteUser)
-        // UserDataService.deleteUsers(DeleteUser).then(
-        //     response => {
-        //         console.log(response);
-        //         retrieveValues();
-        //     }
-        // ).catch(e => {
-        //     console.log(e);
-        // })
+    const deleteUser = (object) => {
+        console.log(object._id)
+        UserDataService.deleteUsers(object._id).then(
+            response => {
+                console.log(response);
+                retrieveValues();
+            }
+        ).catch(e => {
+            console.log(e);
+        })
     }
 
     const updateUser = (updatedUser) => {
