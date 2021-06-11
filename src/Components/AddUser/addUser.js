@@ -24,7 +24,6 @@ export const AddUser = () => {
         );
     }
 
-
     return (
         <div className="edit-user">
 
@@ -32,6 +31,7 @@ export const AddUser = () => {
                 <h2 className="main-head">Add Users</h2>
                 <h4 className="secondary-head">Insert Operation.</h4>
             </div>
+
             <form onSubmit={handleSubmit}>
                 <label className="label">Name:</label><br/>
                 <input

@@ -31,8 +31,7 @@
 }
 
 .input-field {
-  @include border-modern-input;
-  @include font-headers;
+ border-radius: 10px;
 }
 
 .btn-submit {

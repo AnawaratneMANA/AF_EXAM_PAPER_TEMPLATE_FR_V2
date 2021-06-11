@@ -7,15 +7,15 @@ class UserDataService {
     }
 
     updateUser(userData){
-        return http.put('/user/edit', userData)
+        return http.put('/user/update', userData);
     }
 
     displayAllUsers () {
         return http.get("/user");
     }
 
-    deleteUsers (id, userId) {
-        return http.delete(`/user/delete?id=${id}`, {user: {user_id: userId}});
+    deleteUsers (userData) {
+        return http.delete("/user/delete", userData);
     }
 }
 

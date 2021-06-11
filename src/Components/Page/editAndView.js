@@ -27,12 +27,27 @@ export const EditAndView = () => {
         setSelectedUser(object);
     }
 
-    const deleteUser = (userId) => {
-
+    const deleteUser = (DeleteUser) => {
+        console.log(DeleteUser)
+        // UserDataService.deleteUsers(DeleteUser).then(
+        //     response => {
+        //         console.log(response);
+        //         retrieveValues();
+        //     }
+        // ).catch(e => {
+        //     console.log(e);
+        // })
     }
 
-    const updateUser = () => {
-
+    const updateUser = (updatedUser) => {
+        console.log(updatedUser);
+        // UserDataService.updateUser(updatedUser)
+        //     .then(response => {
+        //         console.log(response)
+        //         retrieveValues();
+        //     }).catch(e => {
+        //     console.log(e);
+        // });
     }
 
     const clear = () => {
@@ -45,7 +60,7 @@ export const EditAndView = () => {
 
     return (
         <div className="container">
-            <EditUser selectedUser={selectedUser} updateUser={updateUser} clear={clear}/>
+            <EditUser selectedUser={selectedUser} updateUser={updateUser} setSelectedUser={setSelectedUser}  clear={clear}/>
             <UserList users={users} sendSelectedUser={sendSelectedUser} deleteUser={deleteUser}/>
         </div>
     )

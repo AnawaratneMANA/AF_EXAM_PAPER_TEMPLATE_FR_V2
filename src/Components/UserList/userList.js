@@ -38,7 +38,7 @@ export const UserList = ({users, sendSelectedUser, deleteUser}) => {
                             <td>{user._id}</td>
                             <td>{user.firstName}</td>
                             <td><Button onClick={() => sendSelectedUser(user)}>Edit</Button></td>
-                            <td><Button onClick={() => deleteUser(user._id)}>Delete</Button></td>
+                            <td><Button onClick={() => deleteUser(user)}>Delete</Button></td>
                         </tr>
                         )
                     )}
