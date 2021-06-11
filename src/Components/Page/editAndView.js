@@ -41,13 +41,13 @@ export const EditAndView = () => {
 
     const updateUser = (updatedUser) => {
         console.log(updatedUser);
-        // UserDataService.updateUser(updatedUser)
-        //     .then(response => {
-        //         console.log(response)
-        //         retrieveValues();
-        //     }).catch(e => {
-        //     console.log(e);
-        // });
+        UserDataService.updateUser(updatedUser)
+            .then(response => {
+                console.log(response)
+                retrieveValues();
+            }).catch(e => {
+            console.log(e);
+        });
     }
 
     const clear = () => {
