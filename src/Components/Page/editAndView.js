@@ -19,7 +19,7 @@ export const EditAndView = () => {
     const retrieveValues = () => {
         UserDataService.displayAllUsers()
             .then(response => {
-                setUsers(response.data);
+                setUsers(response.data.user);
             }).catch(e => {
             console.log(e);
         });
