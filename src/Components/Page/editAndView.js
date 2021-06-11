@@ -7,9 +7,7 @@ import UserDataService from '../../Service/userDataService';
 export const EditAndView = () => {
 
     const [users, setUsers] = useState([]);
-    const [selectedUser, setSelectedUser] = useState([{
-        firstName: ''
-    }]);
+    const [selectedUser, setSelectedUser] = useState([]);
 
     useEffect(()=> {
         retrieveValues();

@@ -34,7 +34,7 @@ export const UserList = ({users, sendSelectedUser}) => {
                         <tr>
                             <td>{user._id}</td>
                             <td>{user.firstName}</td>
-                            <td><Button>Edit</Button></td>
+                            <td><Button onClick={() => sendSelectedUser(user)}>Edit</Button></td>
                             <td><Button>Delete</Button></td>
                         </tr>
                         )
