@@ -15,14 +15,13 @@ export const EditAndView = () => {
         retrieveValues();
     },[]);
 
-    const array = Object.values(users);
 
     const retrieveValues = () => {
         UserDataService.displayAllUsers()
             .then(response => {
                 setUsers(response.data);
             }).catch(e => {
-                console.log(e);
+            console.log(e);
         });
     }
 

@@ -1,9 +1,21 @@
 import React from 'react'
 import './userList.css'
+import {Button} from "@material-ui/core";
 export const UserList = ({users, sendSelectedUser}) => {
+    const array = Object.values(users);
+    console.log(array.length)
+    console.log(array.users)
 
-    console.log(users.users.length)
-    console.log(users.users)
+    const products = [
+        //Dummy values.
+        { id: 1, name: "DragonFly", description: "Apple M1 Macbook Air", price: '239,000/=', image: 'https://cdn.pocket-lint.com/r/s/970x/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-qy49zfkn53-jpg.webp'},
+        { id: 2, name: "Zenbook", description: "Apple M1 Macbook Pro", price: '345,000/=', image: 'https://i.pcmag.com/imagery/reviews/05CbcW9cP4o0rqbCnVB2OFZ-1..1584707541.jpg'},
+        { id: 3, name: "Latitude", description: "HP Elitebook 840", price: '320,000/=', image: 'https://www.notebookcheck.net/uploads/tx_nbc2/4zu3_HP_Elitebook_840_G5.jpg'}
+    ]
+
+    console.log(array)
+    console.log(products)
+
     return (
         <div className="edit-user-table">
             <div className="header-section">
@@ -17,13 +29,17 @@ export const UserList = ({users, sendSelectedUser}) => {
                     <tr>
                         <th>ID</th>
                         <th>FirstName</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {users.users.map((user) => (
+                    {products.map((user) => (
                         <tr>
                             <td>{user.id}</td>
-                            <td>Sample Value</td>
+                            <td>{user.name}</td>
+                            <td><Button>Edit</Button></td>
+                            <td><Button>Delete</Button></td>
                         </tr>
                         )
                     )}
