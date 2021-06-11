@@ -1,15 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './addUser.css'
+import UserDataService from '../../Service/userDataService';
 export const AddUser = () => {
 
     const [userData, setUserData] = useState({
        firstName: ''
     });
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-        //Call the DB method.
+        UserDataService.createUser(userData).then(
+            response => {
+                setUserData({
+                    firstName: response.data.firstName,
+                });
+                console.log(response.data);
+            }
+        ).catch(e => {
+                console.log(e);
+                alert(e.message);
+            }
+        );
     }
 
 

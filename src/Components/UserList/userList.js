@@ -1,10 +1,10 @@
 import React from 'react'
 import './userList.css'
-export const UserList = () => {
+export const UserList = ({users, sendSelectedUser}) => {
 
-
-
-
+    const array = Object.values(users);
+    console.log(array.length)
+    console.log(array)
     return (
         <div className="edit-user-table">
             <div className="header-section">
@@ -16,39 +16,18 @@ export const UserList = () => {
                 <table>
                     <thead>
                     <tr>
-                        <th>Col 1</th>
-                        <th>Col 2</th>
+                        <th>ID</th>
+                        <th>FirstName</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1.1</td>
-                        <td>2.1</td>
-                    </tr>
-                    <tr>
-                        <td>1.2</td>
-                        <td>2.2</td>
-                    </tr>
-                    <tr>
-                        <td>1.3</td>
-                        <td>2.3</td>
-                    </tr>
-                    <tr>
-                        <td>1.4</td>
-                        <td>2.4</td>
-                    </tr>
-                    <tr>
-                        <td>1.5</td>
-                        <td>2.5</td>
-                    </tr>
-                    <tr>
-                        <td>1.4</td>
-                        <td>2.4</td>
-                    </tr>
-                    <tr>
-                        <td>1.5</td>
-                        <td>2.5</td>
-                    </tr>
+                    {Object.values(users).map((user) => (
+                        <tr>
+                            <td>{user.id}</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        )
+                    )}
                     </tbody>
                 </table>
             </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './editUser.css'
 export const EditUser = () => {
+
+
+
     return (
             <div className="edit-user">
                 <div className="header-section">
